@@ -26,9 +26,12 @@ namespace Godisautomaten
 
         public void PrintDisplay()
         {
+            // If machine is empty
             if (candies.Count == 0) {
                 Console.WriteLine("TOMT!\nSelecta har inte fyllt på maskinen idag. Sorry... ");
+                return;
             }
+
             for (int i = 0; i < candies.Count; i++)
             {
                 // Print items in machine. (i+1) for better ux

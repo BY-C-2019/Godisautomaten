@@ -36,13 +36,13 @@ namespace Godisautomaten
 
                 try {
                     int convInput = Convert.ToInt32(input);
+
+                    // Attemp to buy candy (input - 1 to compensate for application showing 1 index higher for nicer ux)
                     msgLog = candyMachine.Buy(convInput-1, 1);
                 }
                 catch {
                     msgLog = "Felaktig input...";
                 }
-
-
             }
         }
     }
